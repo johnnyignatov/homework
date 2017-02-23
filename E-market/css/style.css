@@ -27,6 +27,7 @@
 	animation-name: moveinup;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
+	box-sizing: border-box;
 
 }
 
@@ -135,24 +136,27 @@
 
 .feature_1 {
 	background: white;
-	width: 33.3%;
+	width: 32%;
 	float: left;
 	height: 300px;
 	padding-top: 50px;
+	box-sizing: border-box;
 }
 .feature_2 {
 	background: white;
-	width: 33.3%;
+	width: 32%;
 	float: left;
 	height: 300px;
 	padding-top: 50px;
+	box-sizing: border-box;
 }
 .feature_3 {
 	background: white;
-	width: 33.4%;
+	width: 32%;
 	float: left;
 	height: 300px;
 	padding-top: 50px;
+	box-sizing: border-box;
 }
 
 .feature_1:hover {
