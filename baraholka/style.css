@@ -1,0 +1,112 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Lobster', cursive;
+}
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+.header {
+	height: 20%;
+	background: #FF8C00;
+}
+
+.brand {
+	display: block;
+	padding-top: 40px;
+	padding-left: 8%;
+	font-size: 50px;
+	color: white;
+	text-shadow: 5px 5px grey;
+}
+}
+
+.navbar	{
+	background: #ffffff;
+}
+
+ul {
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	color: #FF8C00;
+	font-size: 20px;
+	padding: 10px;
+}
+
+li:hover {
+	background: #FF8C00;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.content {
+	height: 700%;
+	background: #FF8C00;
+}
+
+.product {
+	background: #ffffff;
+	width: 90%;
+	height: 337px;
+	display: block;
+	/*border-top: 4px dashed #FF8C00;	*/
+	/*border-bottom: 4px dashed #FF8C00;	*/
+	/*border: 4px solid #FF8C00;*/
+	box-sizing: border-box;
+	margin-left: 5%;
+	margin-right: 5%;
+	/*margin-top: 10%;*/
+	border-top: 20px solid #FF8C00;
+}
+
+.product1 {
+	background: url("product1.jpg") 50% 17%;
+	background-size: 70%;
+}
+.product2 {
+	background: url("http://rain.kiev.ua/assets/images/soul.png") 50% 17% no-repeat;
+	background-size: 73%;
+}
+.product3 {
+	background: url("product3.png") 50% 50% no-repeat;
+	background-size: 110%;
+}
+/*.product4 {
+	background: url("") 50% 45%;
+}
+.product5 {
+	background: url("") 50% 45%;
+}
+.product6 {
+	background: url("") 50% 45%;
+}
+.product7 {
+	background: url("") 50% 45%;
+}
+.product8 {
+	background: url("") 50% 45%;
+}*/
+
+.price {
+	width: 30%;
+	/*height: 15%;*/
+	background: #FF8C00;
+	margin-top: 76%;
+	margin-left: 63%;
+	box-shadow: 5px 5px grey;
+	color: white;
+	padding: 5px;
+	font-size: 18px;
+	text-align: center;
+}
