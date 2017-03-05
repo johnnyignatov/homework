@@ -1,0 +1,40 @@
+html, 
+body {
+	height: 100%;
+	width: 100%;
+	background: #FAF2F5;
+}
+
+.page {
+	height: 100%;
+	width: 1300px;
+	background: #FAF2F5;
+	margin-left: 10px;
+}
+
+.name {
+	text-align: center;
+}
+
+.photo {
+	text-align: center;
+}
+
+.photo img {
+	border: 1px solid black;
+}
+
+.working {
+	color: #5E5E5E;
+	padding-left: 447px;
+}
+
+.title {
+	padding-left: 447px;
+	padding-top: 10px;
+}
+
+ul,
+p {
+	padding-left: 480px;☺
+}
