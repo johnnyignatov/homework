@@ -1,0 +1,169 @@
+body {
+  height: 1000px;
+}
+
+[type = button] {
+  cursor: pointer;
+}
+
+.header {
+  background: #eee;
+  padding: 5px 0;
+}
+
+.logo {
+  text-align: center;
+  &--blue {
+    display: block;
+  }
+}
+
+.nav {
+  padding: 5px 0;
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    width: 80%;
+    margin: 10px auto;
+  }
+  &__item {
+    position: relative;
+    display: inline-block;
+  }
+  &__link {
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0 1px;
+    border-radius: 5px;
+    &:hover {
+      background: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.subnav {
+  display: none;
+  list-style: none;
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  z-index: 1;
+  &__item {
+    margin: 10px 0;
+  }
+  &__link {
+    background: #eee;
+    padding: 10px 20px;
+  }
+  &--visible {
+    display: block;
+    color: blue;
+  }
+}
+
+.social {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+  &__list {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  &__item {
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    &:nth-child(1) {
+      background: url(../img/spritesheet.png) -70px 10px no-repeat;
+    }
+    &:nth-child(2) {
+      background: url(../img/spritesheet.png) -3px 12px no-repeat;
+    }
+    &:nth-child(3) {
+      background: url(../img/spritesheet.png) -138px 10px no-repeat;
+    }
+    &__link {
+      overflow: auto;
+      display: inline-block;
+    }
+  }
+}
+
+.slider {
+  @media (min-width: 960px) {
+    padding: 100px 0 50px 0;
+  }
+  // background: #eee;
+}
+
+#banner {
+  width: 100%;
+  position: relative;
+  &__left {
+    position: absolute;
+    left: 35%;
+    bottom: 2%;
+    cursor: pointer;
+    &--active {
+      position: absolute;
+      bottom: 8%;
+      cursor: pointer;
+      left: 33%;
+    }
+  }
+  &__right {
+    position: absolute;
+    right: 35%;
+    bottom: 2%;
+    cursor: pointer;
+    &--active {
+      position: absolute;
+      bottom: 8%;
+      cursor: pointer;
+      right: 33%;
+    }
+  }
+}
+
+
+.promo {
+  padding: 30px 30px;
+  @media (min-width: 960px) {
+    padding: 50px 50px 0 50px;
+  }
+  &__title {
+    text-align: center;
+    padding: 10px 0;
+  }
+  &__text {
+    text-align: justify;
+  }
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.news {
+  text-align: center;
+  padding: 10px;
+  @media (min-width: 960px) {
+    padding: 100px 0;
+    // background: none;
+    // background: linear-gradient(to bottom, #fff, #e4e4e4);
+  }
+  &__block {
+    background: #eee;
+    border: 2px solid #fff;
+    // margin-bottom: 2px;
+    padding: 20px 0;
+  }
+  &__article {
+    // font-weight: bold;
+    // font-size: 24px;
+  }
+}

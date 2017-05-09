@@ -1,0 +1,190 @@
+body {
+  height: 1000px;
+}
+
+[type=button] {
+  cursor: pointer;
+}
+
+.header {
+  background: #eee;
+  padding: 5px 0;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo--blue {
+  display: block;
+}
+
+.nav {
+  padding: 5px 0;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.nav__item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav__link {
+  padding: 10px 20px;
+  text-align: center;
+  margin: 0 1px;
+  border-radius: 5px;
+}
+
+.nav__link:hover {
+  background: #fff;
+  text-decoration: none;
+}
+
+.subnav {
+  display: none;
+  list-style: none;
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  z-index: 1;
+}
+
+.subnav__item {
+  margin: 10px 0;
+}
+
+.subnav__link {
+  background: #eee;
+  padding: 10px 20px;
+}
+
+.subnav--visible {
+  display: block;
+  color: blue;
+}
+
+.social {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .social {
+    display: block;
+  }
+}
+
+.social__list {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.social__item {
+  display: inline-block;
+  width: 30px;
+  height: 50px;
+}
+
+.social__item:nth-child(1) {
+  background: url(../img/spritesheet.png) -70px 10px no-repeat;
+}
+
+.social__item:nth-child(2) {
+  background: url(../img/spritesheet.png) -3px 12px no-repeat;
+}
+
+.social__item:nth-child(3) {
+  background: url(../img/spritesheet.png) -138px 10px no-repeat;
+}
+
+.social__item__link {
+  overflow: auto;
+  display: inline-block;
+}
+
+@media (min-width: 960px) {
+  .slider {
+    padding: 100px 0 50px 0;
+  }
+}
+
+#banner {
+  width: 100%;
+  position: relative;
+}
+
+#banner__left {
+  position: absolute;
+  left: 35%;
+  bottom: 2%;
+  cursor: pointer;
+}
+
+#banner__left--active {
+  position: absolute;
+  bottom: 8%;
+  cursor: pointer;
+  left: 33%;
+}
+
+#banner__right {
+  position: absolute;
+  right: 35%;
+  bottom: 2%;
+  cursor: pointer;
+}
+
+#banner__right--active {
+  position: absolute;
+  bottom: 8%;
+  cursor: pointer;
+  right: 33%;
+}
+
+.promo {
+  padding: 30px 30px;
+}
+
+@media (min-width: 960px) {
+  .promo {
+    padding: 50px 50px 0 50px;
+  }
+}
+
+.promo__title {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.promo__text {
+  text-align: justify;
+}
+
+.promo button {
+  display: block;
+  margin: 0 auto;
+}
+
+.news {
+  text-align: center;
+  padding: 10px;
+}
+
+@media (min-width: 960px) {
+  .news {
+    padding: 100px 0;
+  }
+}
+
+.news__block {
+  background: #eee;
+  border: 2px solid #fff;
+  padding: 20px 0;
+}
