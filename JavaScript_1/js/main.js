@@ -1,16 +1,23 @@
 function pow(x,n) {
-    var x = prompt('Выберите число', '');
-    var n = prompt('Выберите еще одно число', '');
-    var result = Math.pow(x, n);
+    var result = x;
 
     if (n > 0) {
+        for (var i = 1; i < n; i++) {
+        result *= x;              
+    }
         return result;
+    } else if (n < 0) {
+        n = n * (-1);
+        for (var i = 1; i < n; i++) {
+        result *= x; 
+        return 1 / result;             
+        }
     } else {
-        alert('Enter valid number!');
+        return 1;
     }
 }
 
-console.log(pow());
+console.log(pow(2,-2));
 
 
 var user = [];
@@ -20,10 +27,16 @@ for (i = 0; i < 5; i++) {
 }
 
 var newUser = prompt('Enter your new name', '');
-var userIndex = user.indexOf(newUser);
+result = newUser[0].toUpperCase () + newUser.substr (1).toLowerCase ();
 
-if (newUser == user[userIndex] && newUser != "") {
-    document.getElementById('answer').innerHTML = 'Добро пожаловать на наш сайт, ' + newUser + '!';
+if (newUser == user[user.indexOf(newUser)] && newUser != "") {
+    document.getElementById('answer').innerHTML = 'Добро пожаловать на наш сайт, ' + result + '!';
 } else {
-    document.write('К сожалению твоего имени нету в нашем списке');
+    document.getElementById('answer').innerHTML = 'К сожалению твоего имени нету в нашем списке';
 }
+
+
+
+
+
+
