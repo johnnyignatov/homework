@@ -1,5 +1,5 @@
 function changeClass() {
-  var className = document.getElementById('subnav').classList.add('subnav--visible');
+  document.getElementById('subnav').classList.add('subnav--visible');
 }
 
 function deleteClass() {
@@ -9,11 +9,11 @@ function deleteClass() {
 var imgFlag = 'img1';
 function changeImage() {
   var img = document.getElementById('banner');
-  if (imgFlag == 'img1') {
-    img.src = 'img/image_2.png';
+    if (imgFlag == 'img1') {
+    img.src = 'dist/img/image_2.png';
     imgFlag = 'img2';
   } else {
-    img.src = 'img/cable-computer-sata-s-ata-40604.jpeg';
+    img.src = 'dist/img/bg-1.jpeg';
     imgFlag = 'img1';
   }
 }
@@ -39,6 +39,11 @@ function moveBackLeft() {
   arrow.id = 'banner__left';
 }
 
-// function changeBackground() {
-//   document.getElementById('article').style.background = '#777';
-// }
+function changeStyle() {
+  document.getElementById('btn').classList.add('btn-primary');
+  document.getElementById('btn').classList.remove('btn-default');
+}
+function changeStyleBack() {
+  document.getElementById('btn').classList.remove('btn-primary');
+  document.getElementById('btn').classList.add('btn-default');
+}

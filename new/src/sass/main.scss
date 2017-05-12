@@ -9,6 +9,7 @@ body {
 .header {
   background: #eee;
   padding: 5px 0;
+  z-index: 1;
 }
 
 .logo {
@@ -95,9 +96,9 @@ body {
 
 .slider {
   @media (min-width: 960px) {
-    padding: 100px 0 50px 0;
+    padding: 0px 0;
+    margin-top: -150px;
   }
-  // background: #eee;
 }
 
 #banner {
@@ -108,11 +109,17 @@ body {
     left: 35%;
     bottom: 2%;
     cursor: pointer;
+    @media (min-width: 768px) {
+      bottom: 35%;
+    }
     &--active {
       position: absolute;
       bottom: 8%;
       cursor: pointer;
       left: 33%;
+      @media (min-width: 768px) {
+        bottom: 35%;
+      }
     }
   }
   &__right {
@@ -120,11 +127,17 @@ body {
     right: 35%;
     bottom: 2%;
     cursor: pointer;
+    @media (min-width: 768px) {
+      bottom: 35%;
+    }
     &--active {
       position: absolute;
       bottom: 8%;
       cursor: pointer;
       right: 33%;
+      @media (min-width: 768px) {
+        bottom: 35%;
+      }
     }
   }
 }
@@ -166,4 +179,8 @@ body {
     // font-weight: bold;
     // font-size: 24px;
   }
+}
+
+.card-deck {
+  margin: 10px 0;
 }

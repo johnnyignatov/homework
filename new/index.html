@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/main.css">
-    <!-- <link rel="stylesheet" media="(min-width: 960px)" href="css/960.css"> -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script src="dist/js/scrollreveal.js" charset="utf-8"></script> -->
     <script src="dist/js/main.js" defer charset="utf-8"></script>
   </head>
   <body>
@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 push-lg-9 col-xl-3">
           <div class="logo">
-            <h1 id="logo">Brand</h1>
+            <h1 id="logo">Logo</h1>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -44,17 +44,17 @@
         </div>
       </div>
     </div>
-    <div class="container slider">
+    <div class="container-fluid slider">
       <div class="row">
-        <div class="col-xs-12 col-md-6 push-md-6 push-xl-6 col-xl-6">
+        <div class="col-xs-12">
           <img src="dist/img/image_2.png" alt="" id="banner">
           <img src="dist/img/left.png" alt="" id="banner__left" onclick="changeImage()" onmouseover="moveLeft()" onmouseout="moveBackLeft()">
           <img src="dist/img/right.png" alt="" id="banner__right" onclick="changeImage()" onmouseover="moveRight()" onmouseout="moveBackRight()">
         </div>
-        <div class="col-xs-12 col-md-6 pull-md-6 pull-xl-6 promo">
-          <h4 class="promo__title">Promo title</h4>
+        <div class="col-xs-12 promo card-header">
+          <h4 class="promo__title well">Promo title</h4>
           <p class="promo__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga non officiis exercitationem natus numquam velit minus, cupiditate laboriosam nihil recusandae quos repellendus veniam earum nisi obcaecati inventore saepe consequuntur. Ipsum cumque eum omnis consequatur obcaecati, aliquam incidunt hic fugit id voluptate expedita voluptates nesciunt, aspernatur autem aperiam. Doloribus, excepturi.</p>
-          <button type="button" class="btn btn-primary" name="button">Explore</button>
+          <button type="button" id="btn" class="btn btn-default btn-round" name="button" onmouseover="changeStyle()" onmouseout="changeStyleBack()">Explore</button>
         </div>
       </div>
     </div>
@@ -90,12 +90,107 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="card-deck-wrapper">
+            <div class="card-deck">
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-deck">
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-deck">
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card text-center">
+                <img class="card-img-top" style="margin: auto" src="dist/img/product.png" width="70%" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text img-thumbnail"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js" defer></script>
+    <script src="dist/js/animation.js" defer charset="utf-8"></script>
     <script src="dist/js/bootstrap.min.js"></script>
-    <script src="dist/js/animation.js" charset="utf-8"></script>
   </body>
 </html>
