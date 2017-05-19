@@ -4,22 +4,26 @@ function pow(x,n) {
   var n = +(prompt('Enter number', ''));
   var result = x;
 
+  if (x != '' || n != '') {
     if (n > 0) {
-        for (var i = 1; i < n; i++) {
+      for (var i = 1; i < n; i++) {
         result *= x;
-    }
-        return result;
+        console.log(n);
+      }
+      return result;
     } else if (n < 0) {
-        n = n * (-1);
-        for (var i = 1; i < n; i++) {
+      n = n * (-1);
+      for (var i = 1; i < n; i++) {
         result *= x;
         return 1 / result;
-        }
+      }
     } else {
-        return 1;
+      return 1;
     }
+  } else {
+    alert('Please, enter valid number');
+  }
 }
-
 console.log(pow());
 
 

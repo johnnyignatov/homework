@@ -1,0 +1,17 @@
+.thumbnail {
+  padding-bottom: 50px;
+}
+
+form button {
+  margin-top: 30px;
+}
+
+form h2 {
+  max-width: 50%;
+  margin: 30px auto;
+}
+
+.input-group {
+  max-width: 50%;
+  margin: 3px auto;
+}
