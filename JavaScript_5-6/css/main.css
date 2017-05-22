@@ -1,0 +1,38 @@
+.container {
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.screen {
+  min-height: 150px;
+}
+
+button {
+  min-width: 100px;
+}
+
+.seconds {
+  display: flex;
+  align-items: center;
+  min-width: 148px;
+  min-height: 148px;
+  float: right;
+  padding: 40px 0;
+}
+
+.seconds h2 {
+  font-size: 53px;
+}
+
+.milliseconds {
+  min-width: 148px;
+  min-height: 148px;
+  float: right;
+  font-size: 2.2rem;
+  margin: 0 1px;
+  padding: 40px 0;
+}
+
+.milliseconds h2 {
+  font-size: 53px;
+}
