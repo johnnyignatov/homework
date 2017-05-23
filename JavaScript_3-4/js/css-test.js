@@ -60,8 +60,10 @@ var createDOM = {
     btn[0].onclick = function () {
       if (question1.checked && question2.checked && question3.checked) {
         alert('Отлично! Ты с CSS на короткой ноге.');
+        this.form.setAttribute('action', 'index.html');
       } else {
         alert('Неправильно! Попробуй еще раз.');
+        return false;
       }
     };
   }
