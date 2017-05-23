@@ -32,16 +32,16 @@ var createDOM = {
       for (var n = 0; n < questions[i].answears.length; n++) {
         var label = document.createElement('label');
         var labelText = document.createTextNode(questions[i].answears[n]);
-        var checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
-        checkbox.setAttribute('name', 'checkbox');
+        var radio = document.createElement('input');
+        radio.setAttribute('type', 'radio');
+        radio.setAttribute('name', questions[i].name);
         label.className = 'form-control';
         var inputGroupAddon = document.createElement('span');
         var questionDiv =  document.createElement('div');
         questionDiv.className = 'input-group';
         this.form.appendChild(questionDiv);
         inputGroupAddon.className = 'input-group-addon';
-        inputGroupAddon.appendChild(checkbox);
+        inputGroupAddon.appendChild(radio);
         questionDiv.appendChild(inputGroupAddon);
         questionDiv.appendChild(label);
         label.appendChild(labelText);
@@ -51,13 +51,13 @@ var createDOM = {
     }
   },
   checkAnswers: function () {
-    var btn = document.getElementsByTagName('button');
+    var btn = document.querySelector('button');
     var question1 = document.getElementsByTagName('input')[0];
     var question2 = document.getElementsByTagName('input')[3];
     var question3 = document.getElementsByTagName('input')[7];
     var questionsList = document.getElementsByTagName('input');
     console.log(questionsList);
-    btn[0].onclick = function () {
+    btn.onclick = function () {
       if (question1.checked && question2.checked && question3.checked) {
         alert('Отлично! Ты с CSS на короткой ноге.');
         this.form.setAttribute('action', 'index.html');
@@ -72,15 +72,18 @@ var createDOM = {
 var questionsData = [
   {
     question: 'В какой строке содержится корректный синтаксис ?',
-    answears: ['body{color: red}', 'body: {color:red}', '{body:color = red}']
+    answears: ['body{color: red}', 'body: {color:red}', '{body:color = red}'],
+    name: 'question1'
   },
   {
     question: 'Требуется задать цвет заголовка зеленым. Какое стилевое свойство подойдет для этой цели ?',
-    answears: ['color', 'font-color', 'background']
+    answears: ['color', 'font-color', 'background'],
+    name: 'question2'
   },
   {
     question: 'С помощью какого свойства можно установить шрифт ?',
-    answears: ['font-face', 'font-family', 'font-style']
+    answears: ['font-face', 'font-family', 'font-style'],
+    name: 'question3'
   }
 ];
 

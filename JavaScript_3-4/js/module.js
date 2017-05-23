@@ -8,6 +8,7 @@ var createDOM = {
   titleText: document.createTextNode('Тест на знание тегов HTML'),
   container: document.createElement('div'),
   form: document.createElement('form'),
+  fields: document.getElementsByClassName('input-group'),
   button: document.createElement('button'),
   buttonText: document.createTextNode('Проверить результат'),
   setAttr: function () {
@@ -32,15 +33,16 @@ var createDOM = {
       for (var n = 0; n < questions[i].answears.length; n++) {
         var label = document.createElement('label');
         var labelText = document.createTextNode(questions[i].answears[n]);
-        var checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
+        var radio = document.createElement('input');
+        radio.setAttribute('type', 'radio');
+        radio.setAttribute('name', questions[i].name);
         label.className = 'form-control';
         var inputGroupAddon = document.createElement('span');
         var questionDiv =  document.createElement('div');
         questionDiv.className = 'input-group';
         this.form.appendChild(questionDiv);
         inputGroupAddon.className = 'input-group-addon';
-        inputGroupAddon.appendChild(checkbox);
+        inputGroupAddon.appendChild(radio);
         questionDiv.appendChild(inputGroupAddon);
         questionDiv.appendChild(label);
         label.appendChild(labelText);
@@ -50,13 +52,13 @@ var createDOM = {
     }
   },
   checkAnswers: function () {
-    var btn = document.getElementsByTagName('button');
+    var btn = document.querySelector('button');
     var question1 = document.getElementsByTagName('input')[2];
     var question2 = document.getElementsByTagName('input')[3];
     var question3 = document.getElementsByTagName('input')[6];
     var questionsList = document.getElementsByTagName('input');
     console.log(questionsList);
-    btn[0].onclick = function () {
+    btn.onclick = function () {
       if (question1.checked && question2.checked && question3.checked) {
         alert('Отлично! Ты просто Гуру тегов');
         this.form.setAttribute('action', 'index.html');
@@ -71,15 +73,18 @@ var createDOM = {
 var questionsData = [
   {
     question: 'Какой уровень заголовков является верхним?',
-    answears: ['< h6 >', '< h3 >', '< h1 >']
+    answears: ['< h6 >', '< h3 >', '< h1 >'],
+    name: 'question1',
   },
   {
     question: 'За что отвечает тег < body >?',
-    answears: ['Тело документа', 'Голова документа', 'Заголовок документа']
+    answears: ['Тело документа', 'Голова документа', 'Заголовок документа'],
+    name: 'question2'
   },
   {
     question: 'Какой тег отвечает за абзац?',
-    answears: ['< p >', '< br >', '< title >']
+    answears: ['< p >', '< br >', '< title >'],
+    name: 'question3'
   }
 ];
 

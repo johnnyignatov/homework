@@ -32,15 +32,16 @@ var createDOM = {
       for (var n = 0; n < questions[i].answears.length; n++) {
         var label = document.createElement('label');
         var labelText = document.createTextNode(questions[i].answears[n]);
-        var checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
+        var radio = document.createElement('input');
+        radio.setAttribute('type', 'radio');
+        radio.setAttribute('name', questions[i].name);
         label.className = 'form-control';
         var inputGroupAddon = document.createElement('span');
         var questionDiv =  document.createElement('div');
         questionDiv.className = 'input-group';
         this.form.appendChild(questionDiv);
         inputGroupAddon.className = 'input-group-addon';
-        inputGroupAddon.appendChild(checkbox);
+        inputGroupAddon.appendChild(radio);
         questionDiv.appendChild(inputGroupAddon);
         questionDiv.appendChild(label);
         label.appendChild(labelText);
@@ -50,13 +51,13 @@ var createDOM = {
     }
   },
   checkAnswers: function () {
-    var btn = document.getElementsByTagName('button');
+    var btn = document.querySelector('button');
     var question1 = document.getElementsByTagName('input')[0];
     var question2 = document.getElementsByTagName('input')[4];
     var question3 = document.getElementsByTagName('input')[7];
     var questionsList = document.getElementsByTagName('input');
     console.log(questionsList);
-    btn[0].onclick = function () {
+    btn.onclick = function () {
       if (question1.checked && question2.checked && question3.checked) {
         alert('Отлично! Ты знаешь селекторы, как свои пять пальцев.');
         this.form.setAttribute('action', 'index.html');
@@ -71,15 +72,18 @@ var createDOM = {
 var questionsData = [
   {
     question: 'К какому элементу будет применяться селектор a.id ?',
-    answears: ['< a class="id" href="#" > ссылка < /a >', '< a id="id" href="#" > ссылка < /a >', '< a class[id] href="id" > ссылка < /a >']
+    answears: ['< a class="id" href="#" > ссылка < /a >', '< a id="id" href="#" > ссылка < /a >', '< a class[id] href="id" > ссылка < /a >'],
+    name: 'question1'
   },
   {
     question: 'Как добавить фоновый цвет ко всем элементам < h1 > ?',
-    answears: ['h1:all {background-color: white}', 'h1 {background-color: white}', 'h1:[all] {background-color: white}']
+    answears: ['h1:all {background-color: white}', 'h1 {background-color: white}', 'h1:[all] {background-color: white}'],
+    name: 'question2'
   },
   {
     question: 'Как указать идентификатор для тега < p > ?',
-    answears: ['< p id="#vivo" >', '< p id="vivo">', '< p id:"vivo" >']
+    answears: ['< p id="#vivo" >', '< p id="vivo">', '< p id:"vivo" >'],
+    name: 'question3'
   }
 ];
 
