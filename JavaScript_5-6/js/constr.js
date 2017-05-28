@@ -36,7 +36,7 @@
         this.stopButton.setAttribute('value', 'Stop');
         this.startButton.setAttribute('type', 'button');
         this.startButton.setAttribute('type', 'button');
-        this.form.setAttribute('action', 'constr.html');
+        this.form.setAttribute('action', 'index.html');
       };
       this.generate = function () {
         this.hoursText.innerHTML = '00';
