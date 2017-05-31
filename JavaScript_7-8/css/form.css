@@ -1,0 +1,136 @@
+body {
+  margin: 200px 0 0 0;
+  padding: 0;
+  background: #AF0006;
+  font-family: Arial, sans-serif;
+}
+.container {
+  width: 50%;
+  margin: 100px auto;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+#home {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background: #AF0006;
+  text-decoration: none;
+}
+
+input {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border: 2px solid #eee;
+  color: #fff;
+  background: #AF0006;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, .5);
+}
+
+input:focus {
+  border: 2px solid #fff;
+}
+
+#submit-form {
+  display: block;
+  padding: 10px;
+  background-color: #AF0006;
+  border: 2px solid #fff;
+  width: 226px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-info {
+  position: absolute;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  top: 200px;
+  right: 300px;
+  display: block;
+  width: 250px;
+  height: 25px;
+  border: 2px solid #fff;
+  font-size: 16px;
+}
+
+.email-info {
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  position: absolute;
+  top: 242px;
+  right: 300px;
+  display: block;
+  width: 250px;
+  height: 25px;
+  border: 2px solid #fff;
+}
+
+.age-info {
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  position: absolute;
+  top: 284px;
+  right: 300px;
+  display: block;
+  width: 250px;
+  height: 25px;
+  border: 2px solid #fff;
+}
+
+.password-info {
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  position: absolute;
+  top: 327px;
+  right: 300px;
+  display: block;
+  width: 250px;
+  height: 25px;
+  border: 2px solid #fff;
+}
+
+.password-repeat-info {
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  position: absolute;
+  top: 370px;
+  right: 100px;
+  display: block;
+  width: 450px;
+  height: 25px;
+  border: 2px solid #fff;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+span {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
