@@ -4,28 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <script src="js/tabs.js" charset="utf-8"></script> -->
-  <!-- <script src="js/tabs.js" charset="utf-8"></script> -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="js/tabs2.js" charset="utf-8"></script>
+  <script src="js/newtab.js" defer charset="utf-8"></script>
   <link rel="stylesheet" href="css/tabs.css">
-  <title>Document</title>
+  <title>Tabs</title>
 </head>
 <body>
-<div class="container">
-  <ul class="list">
-    <li class="list-item"><a href="#1" id="1" class="list-link">Link</a></li>
-    <li class="list-item"><a href="#2" id="2" class="list-link">Link</a></li>
-    <li class="list-item"><a href="#3" id="3" class="list-link">Link</a></li>
-  </ul>
-  <ul>
-    <li class='toggled'><a href="1">Text 1</a></li>
-    <li class='toggled'><a href="2">Text 2</a></li>
-    <li class='toggled'><a href="3">Text 3</a></li>
-  </ul>
-</div>
-
-
+  <div class="container">
+      <ul class="list">
+        <li class="list-item"><a href="#id-1" class="list-link">ReactJS</a></li>
+        <li class="list-item"><a href="#id-2" class="list-link">AngularJS</a></li>
+        <li class="list-item"><a href="#id-3" class="list-link">Vue.js</a></li>
+      </ul>
+    <div class="text-box">
+      <ul>
+        <div class="toggled" id="id-1">React (sometimes styled React.js or ReactJS) is an open-source JavaScript library[2] for building user interfaces. It is maintained by Facebook, Instagram and a community of individual developers and corporations.[3][4][5] According to JavaScript analytics service Libscore, React is currently being used on the websites of Netflix, Imgur, Buffer, Bleacher Report, Feedly, Airbnb, SeatGeek, HelloSign, Walmart, and others. React allows developers to create large web applications that use data which can change over time, without reloading the page. Its main goal is to be fast, simple and scalable. React processes only user interfaces in applications. This corresponds to View in the Model-View-Controller (MVC) template, and can be used in combination with other JavaScript libraries or frameworks in MVC, such as AngularJS.</div>
+        <div class="toggled" id="id-2">AngularJS (commonly referred to as "Angular.js" or "AngularJS 1.X") is a JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications. The JavaScript components complement Apache Cordova, the framework used for developing cross-platform mobile apps. It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications. In 2014, the original AngularJS team began working on Angular (Application Platform). The AngularJS framework works by first reading the HTML page, which has embedded into it additional custom tag attributes. Angular interprets those attributes as directives to bind input or output parts of the page to a model that is represented by standard JavaScript variables. The values of those JavaScript variables can be manually set within the code, or retrieved from static or dynamic JSON resources.According to JavaScript analytics service Libscore, AngularJS is used on the websites of Wolfram Alpha, NBC, Walgreens, Intel, Sprint, ABC News, and approximately 12,000 other sites out of 1 million tested in October 2016.[3] AngularJS is the 6th most starred project of all time on GitHub. AngularJS is the frontend part of the MEAN stack, consisting of MongoDB database, Express.js web application server framework, Angular.js itself, and Node.js server runtime environment.</div>
+        <div class="toggled" id="id-3">Vue.js (commonly referred to as Vue; pronounced /vjuː/, like view) is an open-source progressive JavaScript framework for building user interfaces.[4] Integration into projects that use other JavaScript libraries is made easy with Vue because it is designed to be incrementally adoptable. Vue can also function as a web application framework capable of powering advanced single-page applications. According to a 2016 JavaScript survey, Vue has an 89% developer satisfaction rating.[5] It accumulates around 95 GitHub stars per day,[5][6] and is the 10th most starred project on GitHub of all time. The project focuses on making ideas in web UI development (components, declarative UI, hot-reloading, time-travel debugging, etc.) more approachable. It attempts to be less opinionated and thus easier for developers to pick up.</div>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
-

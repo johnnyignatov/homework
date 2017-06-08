@@ -27,7 +27,7 @@
     this.secondsText = this.createEl('secondsText', 'h2', '', '00');
     this.millisecondsText = this.createEl('millisecondsText', 'h2', '', '000');
     this.startButton = this.createEl('startButton', 'button', 'btn btn-secondary', 'Start', 'button');
-    this.stopButton = this.createEl('stopButton', 'input', 'btn btn-danger', 'Stop', 'submit', 'Stop');
+    this.stopButton = this.createEl('stopButton', 'button', 'btn btn-danger', 'Stop', '', 'button');
     this.hoursLabel = this.createEl('hoursLabel', 'h6', '', 'Hours');
     this.minutesLabel = this.createEl('minutesLabel', 'h6', '', 'Minutes');
     this.secondsLabel = this.createEl('secondsLabel', 'h6', '', 'Seconds');

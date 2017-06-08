@@ -1,8 +1,10 @@
 $(document).ready(function() {
   var $body = $('body');
+
   var $home = $('<a>Go back</a>').attr('id', 'home').attr('href', 'index.html');
   var $container = $('<div>');
   var $form = $('<form>').attr('id', 'form');
+  var $showAll = $('<button>Show all hints</button>').attr('id', 'show-all');
   var $loginInfo = $('<span>You need to enter valid login</span>').addClass('login-info').hide();
   var $emailInfo = $('<div>You need to enter valid e-mail</div>').addClass('email-info').hide();
   var $ageInfo = $('<div>You need to enter your age</div>').addClass('age-info').hide();
@@ -10,68 +12,72 @@ $(document).ready(function() {
   var $passwordRepeatInfo = $('<div>Your password must be the same as in the previous field</div>').addClass('password-repeat-info').hide();
   var $login = $('<input>').attr({
     type: 'text',
-    placeholder: 'Login',
-    required: 'required'
+    autocomplete: 'off'
   });
   var $email = $('<input>').attr({
     type: 'email',
-    placeholder: 'E-mail',
-    required: 'required'
+    autocomplete: 'off'
   });
   var $age = $('<input>').attr({
     type: 'number',
-    placeholder: 'Age',
-    required: 'required'
+    autocomplete: 'off'
   });
   var $password = $('<input>').attr({
     type: 'password',
-    placeholder: 'Password',
     id: 'password',
-    required: 'required'
+    autocomplete: 'off'
   });
   var $passwordRepeat = $('<input>').attr({
     type: 'password',
-    placeholder: 'Repeat password',
     id: 'check-password',
-    required: 'required'
+    autocomplete: 'off'
   });
   var $formSubmit = $('<input>').attr({
     type: 'submit',
     id: 'submit-form'
   }).val('Зарегистрироваться!').hide();
 
-  $login.focus(function() {
+
+  $login.mouseenter(function () {
     $loginInfo.fadeToggle(400);
   });
-  $login.focusout(function() {
-    $loginInfo.fadeToggle(400);
+  $login.mouseleave(function() {
+    $loginInfo.fadeToggle(100);
   });
 
-  $email.focusin(function() {
+  $email.mouseenter(function() {
     $emailInfo.fadeToggle(400);
   });
-  $email.focusout(function() {
-    $emailInfo.fadeToggle(400);
+  $email.mouseleave(function() {
+    $emailInfo.fadeToggle(100);
   });
 
-  $age.focusin(function() {
+  $age.mouseenter(function() {
     $ageInfo.fadeToggle(400);
   });
-  $age.focusout(function() {
-    $ageInfo.fadeToggle(400);
+  $age.mouseleave(function() {
+    $ageInfo.fadeToggle(100);
   });
 
-  $password.focusin(function() {
+  $password.mouseenter(function() {
     $passwordInfo.fadeToggle(400);
   });
-  $password.focusout(function() {
-    $passwordInfo.fadeToggle(400);
+  $password.mouseleave(function() {
+    $passwordInfo.fadeToggle(100);
   });
 
-  $passwordRepeat.focusin(function() {
+  $passwordRepeat.mouseenter(function() {
     $passwordRepeatInfo.fadeToggle(400);
   });
-  $passwordRepeat.focusout(function() {
+  $passwordRepeat.mouseleave(function() {
+    $passwordRepeatInfo.fadeToggle(100);
+  });
+
+  $showAll.on('click', function functionName() {
+    $loginInfo.fadeToggle(400);
+    $emailInfo.fadeToggle(400);
+    $ageInfo.fadeToggle(400);
+    $passwordInfo.fadeToggle(400);
     $passwordRepeatInfo.fadeToggle(400);
   });
 
@@ -88,6 +94,7 @@ $(document).ready(function() {
   $body.append($ageInfo);
   $body.append($passwordInfo);
   $body.append($passwordRepeatInfo);
+  $body.append($showAll);
   $body.append($home);
 
 $passwordRepeat.keyup(function() {
