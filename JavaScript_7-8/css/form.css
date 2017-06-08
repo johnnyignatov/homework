@@ -48,7 +48,6 @@ input:focus {
 }
 
 
-
 #submit-form {
   display: block;
   padding: 10px;
@@ -152,6 +151,7 @@ span {
   margin: 0 auto;
   width: 50%;
   color: #fff;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
+  box-shadow: 0 0 20px #37080a;
 }

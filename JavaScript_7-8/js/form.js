@@ -5,11 +5,11 @@ $(document).ready(function() {
   var $container = $('<div>');
   var $form = $('<form>').attr('id', 'form');
   var $showAll = $('<button>Show all hints</button>').attr('id', 'show-all');
-  var $loginInfo = $('<span>You need to enter valid login</span>').addClass('login-info').hide();
-  var $emailInfo = $('<div>You need to enter valid e-mail</div>').addClass('email-info').hide();
-  var $ageInfo = $('<div>You need to enter your age</div>').addClass('age-info').hide();
-  var $passwordInfo = $('<div>You need to enter your password</div>').addClass('password-info').hide();
-  var $passwordRepeatInfo = $('<div>Your password must be the same as in the previous field</div>').addClass('password-repeat-info').hide();
+  var $loginInfo = $('<span>You need to enter valid login</span>').addClass('info login-info').hide();
+  var $emailInfo = $('<span>You need to enter valid e-mail</span>').addClass('info email-info').hide();
+  var $ageInfo = $('<span>You need to enter your age</span>').addClass('info age-info').hide();
+  var $passwordInfo = $('<span>You need to enter your password</span>').addClass('info password-info').hide();
+  var $passwordRepeatInfo = $('<span>Your password must be the same as in the previous field</span>').addClass('info password-repeat-info').hide();
   var $login = $('<input>').attr({
     type: 'text',
     autocomplete: 'off'
@@ -37,42 +37,6 @@ $(document).ready(function() {
     id: 'submit-form'
   }).val('Зарегистрироваться!').hide();
 
-
-  $login.mouseenter(function () {
-    $loginInfo.fadeToggle(400);
-  });
-  $login.mouseleave(function() {
-    $loginInfo.fadeToggle(100);
-  });
-
-  $email.mouseenter(function() {
-    $emailInfo.fadeToggle(400);
-  });
-  $email.mouseleave(function() {
-    $emailInfo.fadeToggle(100);
-  });
-
-  $age.mouseenter(function() {
-    $ageInfo.fadeToggle(400);
-  });
-  $age.mouseleave(function() {
-    $ageInfo.fadeToggle(100);
-  });
-
-  $password.mouseenter(function() {
-    $passwordInfo.fadeToggle(400);
-  });
-  $password.mouseleave(function() {
-    $passwordInfo.fadeToggle(100);
-  });
-
-  $passwordRepeat.mouseenter(function() {
-    $passwordRepeatInfo.fadeToggle(400);
-  });
-  $passwordRepeat.mouseleave(function() {
-    $passwordRepeatInfo.fadeToggle(100);
-  });
-
   $showAll.on('click', function functionName() {
     $loginInfo.fadeToggle(400);
     $emailInfo.fadeToggle(400);
@@ -84,18 +48,29 @@ $(document).ready(function() {
   $body.append($container);
   $container.append($form);
   $form.append($login);
+  $form.append($loginInfo);
   $form.append($email);
+  $form.append($emailInfo);
   $form.append($age);
+  $form.append($ageInfo);
   $form.append($password);
+  $form.append($passwordInfo);
   $form.append($passwordRepeat);
+  $form.append($passwordRepeatInfo);
   $form.append($formSubmit);
-  $body.append($loginInfo);
-  $body.append($emailInfo);
-  $body.append($ageInfo);
-  $body.append($passwordInfo);
-  $body.append($passwordRepeatInfo);
   $body.append($showAll);
   $body.append($home);
+
+  var $input = $('input');
+
+  $input.on('mouseenter', function (elem) {
+    $_this = $(this);
+    $_this.next().fadeToggle(400);
+  });
+  $input.on('mouseleave', function (elem) {
+    $_this = $(this);
+    $_this.next().fadeToggle(100);
+  });
 
 $passwordRepeat.keyup(function() {
     if ($('#password').val() === $('#check-password').val() && $('#password').val() !== '' && $('#check-password').val() !== '' && $('input').val() !== '') {
