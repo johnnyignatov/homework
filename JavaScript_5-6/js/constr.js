@@ -21,6 +21,10 @@
       this.secondsLabel = document.createElement('h6');
       this.millisecondsLabel = document.createElement('h6');
       this.form = document.createElement('form');
+      var _this = this;
+      var pausedTime = 0;
+      var sec;
+      var newDate;
       this.setClass = function () {
         this.div.className = 'container text-center';
         this.box.className = 'screen card card-info';
@@ -39,6 +43,7 @@
         this.form.setAttribute('action', 'index.html');
       };
       this.generate = function () {
+        this.setClass();
         this.hoursText.innerHTML = '00';
         this.minutesText.innerHTML = '00';
         this.secondsText.innerHTML = '00';
@@ -69,72 +74,55 @@
         this.div.appendChild(this.lineBox);
         this.lineBox.appendChild(this.line);
       };
-      this.startTimer = function (context) {
-        this.startButton.onclick = function timer() {
-          // context.stopButton.setAttribute('href', '#');
-          context.startButton.onclick = function () {
-            clearInterval(initHours);
-            clearInterval(initMin);
-            clearInterval(initSec);
-            clearInterval(initMs);
-            context.startButton.innerHTML = 'Continue';
-          };
-          context.stopButton.onclick = function () {
-            clearInterval(initHours);
-            clearInterval(initMin);
-            clearInterval(initSec);
-            clearInterval(initMs);
-            context.hoursText.innerHTML = '00';
-            context.minutesText.innerHTML = '00';
-            context.secondsText.innerHTML = '00';
-            context.millisecondsText.innerHTML = '000';
-            context.startButton.innerHTML = 'Start';
-            context.line.style.width = 0;
-          };
-          context.startButton.innerHTML = 'Pause';
+      this.startTimer = function () {
+        _this.generate();
+        this.startButton.onclick = function () {
+          _this.startButton.innerHTML = 'Pause';
           var defaultDate = new Date();
-          var initHours = setInterval(function() {
-            var newDate = new Date() - defaultDate;
+          var initTime = setInterval(function() {
+            newDate = new Date() - defaultDate + pausedTime;
             var hours = Math.abs(Math.floor(newDate / 1000 / 60 / 60) % 24);
-            if (hours.toString().length == 1) {
-              hours = '0' + hours;
-            }
-            context.hoursText.innerHTML = hours;
-          }, 1);
-          var initMin = setInterval(function() {
-            var newDate = new Date() - defaultDate;
             var min = Math.abs(Math.floor(newDate / 1000 / 60) % 60);
-            if (min.toString().length == 1) {
+            sec = Math.abs(Math.floor(newDate / 1000) % 60);
+            var ms = Math.abs(Math.floor(newDate % 1000));
+            if (hours.toString().length == 1 || min.toString().length == 1) {
+              hours = '0' + hours;
               min = '0' + min;
             }
-            context.minutesText.innerHTML = min;
+            _this.hoursText.innerHTML = hours;
+            _this.minutesText.innerHTML = min;
+            _this.secondsText.innerHTML = sec;
+            _this.millisecondsText.innerHTML = ms;
+            _this.line.style.width = sec + (sec + sec + sec) + 'px';
           }, 1);
-          var initSec = setInterval(function() {
-            var newDate = new Date() - defaultDate;
-            var sec = Math.abs(Math.floor(newDate / 1000) % 60);
-            if (sec.toString().length == 1) {
-              sec = sec;
-            }
-            context.secondsText.innerHTML = sec;
-            context.line.style.width = sec + (sec + sec + sec) + 'px';
-            // context.shadow.style.width = sec + (sec/2) + 11.5 + '%';
-          }, 1000);
-          var initMs = setInterval(function() {
-            var newDate = new Date() - defaultDate;
-            var ms = Math.abs(Math.floor(newDate % 1000));
-            if (ms.toString().length == 1) {
-              ms = '0' + ms;
-            }
-            context.millisecondsText.innerHTML = ms;
-          }, 1);
+          _this.startButton.onclick = function () {
+            pausedTime = sec;
+            clearInterval(initTime);
+            _this.startButton.innerHTML = 'Continue';
+            var startTime = new Date();
+            var s = startTime.getSeconds();
+            _this.startButton.onclick = function () {
+              setInterval(function() {
+                var defaultDate = new Date();
+                var seconds = defaultDate.getSeconds();
+
+              }, 1000);
+            };
+          };
+        };
+        _this.stopButton.onclick = function () {
+          clearInterval(initTime);
+          _this.hoursText.innerHTML = '00';
+          _this.minutesText.innerHTML = '00';
+          _this.secondsText.innerHTML = '00';
+          _this.millisecondsText.innerHTML = '000';
+          _this.startButton.innerHTML = 'Start';
+          _this.line.style.width = 0;
         };
       };
     };
 
     var timer1 = new Build();
-
-    timer1.setClass();
-    timer1.generate();
-    timer1.startTimer(timer1);
+    timer1.startTimer();
 
 })();
