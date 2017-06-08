@@ -3,8 +3,10 @@ body {
   padding: 0;
   background: #AF0006;
   font-family: Arial, sans-serif;
+  color: #fff;
 }
 .container {
+  position: relative;
   width: 50%;
   margin: 100px auto;
   padding: 5px;
@@ -25,9 +27,13 @@ body {
   box-shadow: 0 0 20px #37080a;
 }
 
+#form {
+  position: relative;
+}
+
 input {
   display: block;
-  width: 200px;
+  width: 20%;
   margin: 10px auto;
   padding: 5px 10px;
   border: 2px solid #eee;
@@ -47,7 +53,6 @@ input:focus {
   border: 2px solid #fff;
 }
 
-
 #submit-form {
   display: block;
   padding: 10px;
@@ -60,70 +65,40 @@ input:focus {
   font-weight: bolder;
 }
 
-.login-info {
+.info {
   position: absolute;
   text-align: center;
-  line-height: 25px;
   color: #fff;
-  top: 200px;
-  right: 300px;
-  display: block;
-  width: 250px;
-  height: 25px;
+  display: inline;
+  width: 30vw;
   border: 2px solid #fff;
-  font-size: 16px;
+  font-size: 13px;
+  padding: 5px 2px;
+}
+
+.login-info {
+  top: 0px;
+  right: 5px;
 }
 
 .email-info {
-  text-align: center;
-  line-height: 25px;
-  color: #fff;
-  position: absolute;
-  top: 242px;
-  right: 300px;
-  display: block;
-  width: 250px;
-  height: 25px;
-  border: 2px solid #fff;
+  top: 45px;
+  right: 5px;
 }
 
 .age-info {
-  text-align: center;
-  line-height: 25px;
-  color: #fff;
-  position: absolute;
-  top: 284px;
-  right: 300px;
-  display: block;
-  width: 250px;
-  height: 25px;
-  border: 2px solid #fff;
+  right: 5px;
+  top: 87px;
 }
 
 .password-info {
-  text-align: center;
-  line-height: 25px;
-  color: #fff;
-  position: absolute;
-  top: 327px;
-  right: 300px;
-  display: block;
-  width: 250px;
-  height: 25px;
-  border: 2px solid #fff;
+  right: 5px;
+  top: 124px;
 }
 
 .password-repeat-info {
-  text-align: center;
-  line-height: 25px;
-  color: #fff;
-  position: absolute;
-  top: 370px;
-  right: 100px;
-  display: block;
-  width: 450px;
-  height: 25px;
-  border: 2px solid #fff;
+  right: 5px;
+  top: 169px;
 }
 
 #show-all {
@@ -154,4 +129,12 @@ span {
   font-size: 16px;
   text-align: center;
   box-shadow: 0 0 20px #37080a;
+}
+
+@media (max-width: 633px) {
+  .info {
+    font-size: 9px;
+    line-height: normal;
+    padding: 3px;
+  }
 }
