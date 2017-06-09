@@ -44,6 +44,13 @@ $(document).ready(function() {
     $passwordInfo.fadeToggle(400);
     $passwordRepeatInfo.fadeToggle(400);
   });
+  $showAll.on('mouseleave', function () {
+    $loginInfo.fadeToggle(400);
+    $emailInfo.fadeToggle(400);
+    $ageInfo.fadeToggle(400);
+    $passwordInfo.fadeToggle(400);
+    $passwordRepeatInfo.fadeToggle(400);
+  });
 
   $body.append($container);
   $container.append($form);
