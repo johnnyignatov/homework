@@ -1,0 +1,91 @@
+#gameDashboard {
+  display: none;
+}
+
+html,
+body {
+  /*overflow: auto;*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#menu {
+  background: #555;
+  padding: 30px;
+}
+
+.menu {
+  list-style: none;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.menu-item {
+  display: inline-block;
+  position: relative;
+  margin: 0 2px;
+}
+
+.menu-item:nth-child(odd)::after {
+  content: url(../img/down-arrow.png);
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+
+.menu-link {
+  padding: 10px 30px;
+  background: #fff;
+  color: #555;
+}
+
+.submenu {
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  top: 27px;
+  left: 0;
+  z-index: 1;
+  width: 102px;
+}
+
+.sub-submenu {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  top: 56px;
+  left: 102px;
+  z-index: 1;
+}
+
+.submenu-item,
+.sub-submenu-item {
+  display: block;
+  background: #555;
+}
+
+.submenu-link,
+.sub-submenu-link {
+  padding: 10px 30px;
+  display: block;
+  color: #fff;
+}
+
+.submenu-link:hover,
+.sub-submenu-link:hover {
+  background: #fff;
+  color: #555;
+}
+
+.show {
+  visibility: visible !important;
+}

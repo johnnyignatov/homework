@@ -1,0 +1,46 @@
+#custom-checkboxes input[type="checkbox"] {
+    display:none;
+}
+#custom-checkboxes input[type="checkbox"] + label {
+  font: 18px bold ;
+  color: #444 ;
+  cursor: pointer ;
+}
+#custom-checkboxes input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 5px 0 0;
+    background-image: url(../img/draw-check-mark.png);
+    background-repeat: no-repeat;
+}
+#custom-checkboxes input[type="checkbox"] + label::before {
+    background-position: -38px -260px;
+}
+#custom-checkboxes input[type="checkbox"]:checked + label::before {
+    background-position: 0px 0px;
+}
+#custom-checkboxes input[type="checkbox"]:disabled + label::before {
+    background-position: -152px -260px;
+}
+#custom-checkboxes input[type="checkbox"]:checked:disabled + label::before {
+    background-position: -171px -260px;
+}
+
+//-------------
+#custom-checkboxes {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background: #666;
+}
+
+#custom-checkboxes ul {
+  list-style: none;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
