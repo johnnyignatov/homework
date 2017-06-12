@@ -4,7 +4,6 @@
 
 html,
 body {
-  /*overflow: auto;*/
 }
 
 * {
@@ -25,6 +24,11 @@ a {
   list-style: none;
   margin: 0px auto;
   text-align: center;
+  color: #fff;
+}
+
+.sub-menu {
+  display:none;
 }
 
 .menu-item {
@@ -40,52 +44,42 @@ a {
   top: 0;
 }
 
-
 .menu-link {
   padding: 10px 30px;
   background: #fff;
   color: #555;
 }
 
-.submenu {
-  visibility: hidden;
+
+.sub-menu {
   position: absolute;
   text-align: center;
   top: 27px;
   left: 0;
   z-index: 1;
   width: 102px;
-}
-
-.sub-submenu {
-  display: block;
-  visibility: hidden;
-  position: absolute;
-  text-align: center;
-  top: 56px;
-  left: 102px;
-  z-index: 1;
-}
-
-.submenu-item,
-.sub-submenu-item {
-  display: block;
   background: #555;
+  list-style: none;
 }
 
-.submenu-link,
-.sub-submenu-link {
-  padding: 10px 30px;
-  display: block;
+.sub-sub-menu {
+  left: 102px;
+  top: 36px;
+}
+
+.sub-menu-item {
   color: #fff;
 }
 
-.submenu-link:hover,
-.sub-submenu-link:hover {
-  background: #fff;
-  color: #555;
+.sub-menu-link {
+  display: block;
+  background: #555;
+  color: #fff;
+  padding: 10px 5px;
+  transition: 400ms;
 }
 
-.show {
-  visibility: visible !important;
+.sub-menu-link:hover {
+  background: #fff;
+  color: #555;
 }
