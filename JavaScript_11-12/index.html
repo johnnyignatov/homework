@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/template.css">
+  <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+  <title>JavaScript 11-12</title>
+</head>
+<body>
+  <div class="container">
+    <div class="carousel-arrow-left"></div>
+    <div class="carousel-hider">
+      <ul class="carousel-list">
+        <li class="carousel-element"><img src="./img/img-1.jpeg"></li>
+        <li class="carousel-element"><img src="./img/img-5.jpg"></li>
+        <li class="carousel-element"><img src="./img/img-6.jpeg"></li>
+        <li class="carousel-element"><img src="./img/img-2.jpeg"></li>
+        <li class="carousel-element"><img src="./img/img-3.jpeg"></li>
+        <li class="carousel-element"><img src="./img/img-4.jpeg"></li>
+      </ul>
+    </div>
+    <div class="carousel-arrow-right"></div>
+  </div>
+  <div id="root"></div>
+  <div id="lodash"></div>
+  <script type="text/template" id="template">
+      {{#each data}}
+      <div class="user-card">
+        <img src= {{img}} alt="">
+        <h1>{{name}}</h1>
+        <a href= {{facebook}} _blank>Facebook link</a>
+        <h3>{{phone}}</h3>
+      </div>
+      {{/each}}
+  </script>
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="js/jquery.carousel.js" charset="utf-8"></script>
+<script src="js/carousel.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js" charset="utf-8"></script>
+<script src="js/template.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bubbler One', sans-serif;
+}
+
+#root {
+  overflow: auto;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 23%;
+  padding: 10px;
+  text-align: center;
+  float: left;
+  margin: 0 1%;
+  box-shadow: 8px 0px 20px 0px #bbb;
+}
+
+.user-card h1 {
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+}
+
+.user-card h3 {
+  padding: 10px;
+  float: left;
+  text-align: center;
+  width: 50%;
+  background: #eee;
+  margin: 10px 0;
+  border: 1px solid #fff;
+}
+
+.user-card h3:hover {
+  background: #bbb;
+  color: #fff;
+}
+
+.user-card img {
+  width: 100px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+.user-card a {
+  padding: 10px;
+  float: left;
+  text-align: center;
+  width: 50%;
+  background: #eee;
+  margin: 10px 0;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.user-card a:hover {
+  background: #bbb;
+  color: #fff;
+}

@@ -1,0 +1,46 @@
+.container {
+  width: 790px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.carousel-hider {
+    width: 650px;
+    overflow: hidden;
+    float: left;
+    margin: 0 auto;
+}
+
+.carousel-list {
+    list-style: none;
+    width: 10000px;
+    padding: 0;
+    position: relative;
+}
+
+.carousel-element {
+    display: block;
+    margin-right: 25px;
+    float: left;
+}
+
+.carousel-element img {
+    max-width: 200px;
+}
+
+.carousel-arrow-left, .carousel-arrow-right {
+    float: left;
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    color: #fff;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.carousel-arrow-right {
+  background: url(../img/right-arrow.png) 0 0 no-repeat;
+}
+.carousel-arrow-left {
+  background: url(../img/left-arrow.png) 0 0 no-repeat;
+}
