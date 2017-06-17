@@ -1,0 +1,17 @@
+window.questionsData = [
+  {
+    "question": "Какой уровень заголовков является верхним?",
+    "answears": ["< h6 >", "< h3 >", "< h1 >"],
+    "name": "question1",
+  },
+  {
+    "question": "За что отвечает тег < body >?",
+    "answears": ["Тело документа", "Голова документа", "Заголовок документа"],
+    "name": "question2"
+  },
+  {
+    "question": "Какой тег отвечает за абзац?",
+    "answears": ["< p >", "< br >", "< title >"],
+    "name": "question3"
+  }
+];
