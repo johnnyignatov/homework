@@ -26,29 +26,34 @@ window.fbAsyncInit = function() {
      setElements(true);
      getData();
      console.log('Logged in!');
+     console.log(response);
+     content.style.display = 'block';
      child.style.display = 'block';
+     popup.style.display = 'none';
    } else {
      setElements(false);
      console.log('Not logged in');
-     child.style.display = 'none';
+     content.style.display = 'none';
      userPhoto.setAttribute('src', '');
+     popup.style.display = 'block';
    }
  }
 
-var sidebar = document.querySelector('.sidebar');
-var child = document.querySelector('.list-group');
-var input = document.querySelector('#input');
-var inputValue = input.value;
-var userDevice = document.getElementById('user-birthday');
-var userLink = document.querySelector('#fb-link');
-var userName = document.querySelector('.user-name');
-var userEmail = document.querySelector('.user-email');
-var userPhoto = document.getElementById('user-photo');
-var form = document.getElementById('form');
-var photos = document.querySelector('.photos');
-var searches =  [];
-var elem;
-
+var sidebar = document.querySelector('.sidebar'),
+child = document.querySelector('.list-group'),
+input = document.querySelector('#input'),
+inputValue = input.value,
+userDevice = document.getElementById('user-birthday'),
+userLink = document.querySelector('#fb-link'),
+userName = document.querySelector('.user-name'),
+userEmail = document.querySelector('.user-email'),
+userPhoto = document.getElementById('user-photo'),
+form = document.getElementById('form'),
+photos = document.querySelector('.photos'),
+popup = document.querySelector('.popup'),
+content = document.querySelector('.content'),
+elem, imgBlock, searches =  [];
+// localStorage.clear('searchHistory');
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -77,8 +82,6 @@ function logOut(response) {
   });
 }
 
-// -----------------------------PIXABAY SEARCH API-------------------//
-
 function getData() {
  FB.api('/me?fields=id,name,birthday,email,devices,gender,first_name,link,picture', function (response) {
    if (response && !response.error) {
@@ -98,13 +101,15 @@ function getData() {
  });
 }
 
-form.addEventListener('submit', ev => {
+// -----------------------------PIXABAY SEARCH API-------------------//
+
+form.addEventListener('submit', search = ev => {
   ev.preventDefault();
   var photos = document.querySelector('.photos');
   photos.innerHTML = '';
   input = document.querySelector('#input');
   inputValue = input.value;
-  searches.push(inputValue);
+  searches.push(input.value);
   localStorage.setItem('searchHistory', searches);
   $.ajax({
     url: "https://pixabay.com/api/?key=5694558-599f2bb22075e940da08e86bd&q=" + inputValue + "&image_type=photo&pretty=true",
@@ -128,20 +133,20 @@ form.addEventListener('submit', ev => {
 });
 
 function createRequestResults(data) {
-  console.log(data);
   if (data.totalHits === 0) {
     var noresult = document.createElement('h1');
     noresult.innerHTML = "Ooops! Can't find '" + input.value + "'";
+    photos.style.display = 'block';
     photos.appendChild(noresult);
-    console.log('no results');
   } else {
     for (var i = 0; i < data.hits.length; i++) {
       var imgSource = data.hits[i].previewURL;
       var img = document.createElement('img');
-      var imgBlock = document.createElement('div');
+      imgBlock = document.createElement('div');
       imgBlock.className = 'img-thumbnail item-masonry sizer4';
       img.setAttribute('src', imgSource);
       imgBlock.appendChild(img);
+      photos.style.display = 'block';
       photos.appendChild(imgBlock);
     }
     var $grid = $('.photos');
@@ -162,9 +167,16 @@ function searchHistory() {
   var data = localStorage.getItem('searchHistory').split(',');
   var searchList = document.querySelector('.search-history');
   searchList.innerHTML = '';
+  console.log(searches);
   data.forEach(function (item) {
     var listItem = document.createElement('li');
+    listItem.className = 'img-thumbnail search-item';
     listItem.innerHTML = item;
     searchList.appendChild(listItem);
   });
+  var items = document.querySelector('.search-history');
+  items.onclick = function (ev) {
+    input.value = ev.target.innerHTML;
+    search(ev);
+  };
 }
