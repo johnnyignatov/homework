@@ -16,8 +16,12 @@ a {
 #social {
   margin-top: 8px;
   font-size: 2rem;
-
 }
+
+.social {
+	padding-right: 32px;
+}
+
 #logout {
   display: none;
   text-align: center;
