@@ -13,6 +13,18 @@ a {
   color: inherit;
 }
 
+#app-name {
+  float: left;
+  width: 65%;
+  font-size: 16px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.fb-like {
+  padding-top: 16px;
+}
+
 #social {
   margin-top: 8px;
   font-size: 2rem;
