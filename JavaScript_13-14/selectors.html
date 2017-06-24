@@ -22,7 +22,7 @@
             {{#each answears}}
               <div class="input-group">
                 <span class="input-group-addon">
-                  <input type="radio" name= {{../name}} >
+                  <input type="radio" name= {{../name}} ref= {{../ref}}>
                 </span>
                 <label for="" class="form-control">{{this}}</label>
               </div>
@@ -40,6 +40,7 @@
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js" charset="utf-8"></script>
     <script src="data/selectors.json" charset="utf-8"></script>
     <script src="js/selectors.js" charset="utf-8"></script>

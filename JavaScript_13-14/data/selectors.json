@@ -1,17 +1,22 @@
 window.questionsData = [
   {
     "question": "К какому элементу будет применяться селектор a.id ?",
-    "answears": ["< a class='id href='# > ссылка < /a >", "< a id='id href='# > ссылка < /a >", "< a class[id] href='id' > ссылка < /a >"],
-    "name": "question1"
+    "answears": ["< a class='id' href='#' > ссылка < /a >", "< a id='id href='# > ссылка < /a >", "< a class[id] href='id' > ссылка < /a >"],
+    "name": "question1",
+    "trueanswear": 1,
+    "ref": 0
   },
   {
     "question": "Как добавить фоновый цвет ко всем элементам < h1 > ?",
     "answears": ["h1:all {background-color: white}", "h1 {background-color: white}", "h1:[all] {background-color: white}"],
-    "name": "question2"
+    "name": "question2",
+    "trueanswear": 2
   },
   {
     "question": "Как указать идентификатор для тега < p > ?",
     "answears": ["< p id='#vivo' >", "< p id='vivo'>", "< p id:'vivo' >"],
-    "name": "question3"
+    "name": "question3",
+    "trueanswear": 2,
+    "ref": 2
   }
 ];

@@ -1,0 +1,123 @@
+html,
+body {
+  height: 100%;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#social {
+  margin-top: 8px;
+  font-size: 2rem;
+
+}
+#logout {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-header {
+  text-align: center;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  width: 100%;
+}
+
+.sidebar {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  margin: 5px 0;
+  text-align: left;
+}
+
+.info:first-child {
+  text-align: center;
+  margin-top: 0;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.photos {
+  width: 100%;
+  min-height: 250px;
+  height: 100%;
+  float: left;
+  text-align: center;
+  box-sizing: border-box!important;
+}
+
+.photos h1 {
+  padding-top: 100px;
+}
+
+.header {
+  padding: 5px 0;
+}
+
+#user-photo {
+  border-radius: 50%;
+  padding: 0 10px;
+}
+
+.search {
+  margin-top: 4px;
+}
+
+.info {
+  font-size: 16px;
+}
+
+.list-group {
+  margin-bottom: 0;
+}
+.info-title {
+  font-size: 18px;
+}
+
+.sizer4 {
+  width: 33%;
+}
+
+@media (max-width: 777px) {
+  .sizer4 {
+    width: 49%;
+  }
+}
+
+@media (max-width: 430px) {
+  .sizer4 {
+    width: 100%;
+  }
+}
+
+.item-masonry img {
+  width: 100%;
+  height: auto;
+}
+
+.history {
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 780px) {
+  * {
+    font-size: 14px!important;
+  }
+}
