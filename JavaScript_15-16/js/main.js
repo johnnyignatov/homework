@@ -84,20 +84,20 @@ function logOut(response) {
 
 function getData() {
  FB.api('/me?fields=id,name,birthday,email,devices,gender,first_name,link,picture', function (response) {
-   if (response && !response.error) {
-     userPhoto.setAttribute('src', response.picture.data.url);
-     var appName = document.getElementById('app-name');
-     appName.innerHTML = response.name + ' app';
-     if (response.email !== undefined) {
-       userEmail.innerHTML = "E-mail: " + response.email;
-     }
-     if (response.name !== undefined) {
-       userName.innerHTML = "Name: " + response.name;
-     }
-     if (response.link !== undefined) {
-       userLink.setAttribute('href', response.link);
-     }
-   }
+  //  if (response && !response.error) {
+  //    userPhoto.setAttribute('src', response.picture.data.url);
+  //    var appName = document.getElementById('app-name');
+  //    appName.innerHTML = response.name + ' app';
+  //    if (response.email !== undefined) {
+  //      userEmail.innerHTML = "E-mail: " + response.email;
+  //    }
+  //    if (response.name !== undefined) {
+  //      userName.innerHTML = "Name: " + response.name;
+  //    }
+  //    if (response.link !== undefined) {
+  //      userLink.setAttribute('href', response.link);
+  //    }
+  //  }
  });
 }
 
@@ -131,6 +131,25 @@ form.addEventListener('submit', search = ev => {
   });
 
 });
+
+$.ajax({
+  url: 'https://api.meetup.com/recommended/events?photo-host=public&page=20&sig_id=228180397&fields=react&sig=44b65c980b45b688496788000688934e211a7dce',
+  type: 'GET',
+  dataType: 'jsonp',
+  success: function (newData) {
+    console.log(newData);
+  }
+})
+.done(function() {
+  console.log("success");
+})
+.fail(function() {
+  console.log("error");
+})
+.always(function() {
+  console.log("complete");
+});
+
 
 function createRequestResults(data) {
   if (data.totalHits === 0) {
