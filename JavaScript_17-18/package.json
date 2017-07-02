@@ -1,5 +1,5 @@
 {
-  "name": "js-8-npm-gulp",
+  "name": "JavaScript_17-18",
   "version": "1.0.0",
   "description": "",
   "main": "plan.js",
@@ -21,6 +21,6 @@
   "scripts": {
     "start": "gulp start"
   },
-  "author": "Zerk <axzerk@gmail.com>",
+  "author": "",
   "license": "ISC"
 }
