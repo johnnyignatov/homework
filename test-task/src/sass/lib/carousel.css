@@ -1,0 +1,30 @@
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carousel-hider {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    margin: 0 auto;
+}
+
+.carousel-list {
+    list-style: none;
+    width: 10000px;
+    padding: 0;
+    position: relative;
+}
+
+.carousel-element {
+    display: block;
+    margin-right: 25px;
+    float: left;
+    position: relative;
+}
+
+.carousel-element img {
+    width: 400px;
+}
+

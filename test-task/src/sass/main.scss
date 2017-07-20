@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+.wrapper {
+  background: #000;
+}
+
+.carousel {
+  width: 80%;
+  height: 662px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 1);
+  transform: skewX(-4.5deg);  
+  &-img {
+  width: 368px;
+  height: 660px;
+  float: left;
+  margin: 0 -30px;  
+  opacity: .4;
+  transition: 600ms;
+  z-index: -1;
+  }
+  &-arrow-left {
+  left: 3%;
+  background: url('../img/left-arrow.png') no-repeat;    
+  }
+  &-arrow-right {
+  right: 3%;
+  background: url('../img/left-arrow.png') no-repeat;
+  transform: rotate(180deg);
+  }
+  &-hider > * {
+    transform: skewX(4.5deg);  
+  }
+}
+
+.box {
+  width: 10000px;
+  position: relative;  
+  left: 0px;
+  right: 0px;
+  overflow: hidden; 
+  transition: 700ms;
+  & > * {
+   transform: skewX(0deg);  
+  }
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  bottom: 6%;
+  position: absolute;
+  border: 0;
+  transition: 500ms;
+  bottom: 40%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pagination {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+}
+
+.show {
+  z-index: 1000;
+  opacity: 1;
+  transform: scale(1.4);
+}
+
