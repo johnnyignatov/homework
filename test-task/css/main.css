@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+} 
+
+.container {
+  position: relative;
+  width: 1279px;
+  height: 662px;
+  overflow: hidden;
+  /* margin-top: 50px; */
+  transform: skewX(-4.5deg); 
+}
+.box > * {
+  transform: skewX(0deg); 
+}
+.container > * {
+  transform: skewX(5deg); 
+}
+.box {
+  background: rgba(0, 0, 0, 1); 
+  width: 10000px;
+   position: relative;  
+  left: 0px;
+  right: 0px;
+  /* top: 0px;      */
+  overflow: hidden; 
+  transition: 700ms;
+}
+img {
+  width: 368px;
+  height: 660px;
+  float: left;
+   margin: 0 -28px; 
+  opacity: .4;
+  transition: 600ms;
+  z-index: -1;
+}
+.show {
+  z-index: 1000;
+  opacity: 1;
+  transform: scale(1.2);
+}
+.popup {
+  width: 29%;
+  height: 68.7%;
+  position: absolute;
+  left: -55px;
+  top: 0;
+  background: rgba(0, 0, 0, .7);
+  transform: skewX(-5.4deg); 
+}
+
+.popup-r {
+  width: 51.4%;
+  height: 68.7%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .7);
+  transform: skewX(-4.5deg); 
+}
+
+ul {
+    list-style: none;
+    width: 10000px;
+    padding: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+li {
+  display: block;
+  float: left;
+} 
+
+.left {
+  position: absolute;
+  left: 3%;
+  bottom: 6%;
+  width: 20px;
+  height: 20px;
+  /* border-radius: 30px;
+  width: 60px;
+  height: 60px; */
+  background: url('../img/left-arrow.png') no-repeat;
+}
+
+.right {
+  position: absolute;
+  right: 3%;
+  bottom: 6%;
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  background: url('../img/left-arrow.png') no-repeat;
+  transform: rotate(180deg);
+}
+.btn {
+  border: 0;
+  transition: 500ms;
+  bottom: 40%;
+}
+
+.btn:hover {
+/* background: #333;
+color: #fff; */
+cursor: pointer;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+}
+
