@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/test.css">
+</head>
+
+<body>  
+  <div class="form-container">
+    <form class="test-form">
+      <div class="form-input">
+        <span>Enter your question</span>
+        <input type="text" id="questionInput">
+      </div>
+      <div class="form-input">
+        <span>Write answers through ' , '</span>
+        <input type="text" id="inputAnswers">
+      </div>
+      <div class="form-input">
+        <span>Write # of correct answers through ' , '</span>
+        <input type="text" id="inputCorrect">
+      </div>
+      <div>
+        <button type="button" name="button" class="generate-btn" id="generate">Generate</button>
+        <button type="button" name="button" class="generate-btn" id="clearStorage">Clear</button>
+      </div>
+    </form>
+  </div>
+  <div class="generated-tests" id="genereted-tests">
+      <script type="text/template" id="template">
+        {{#each this}}
+        <div class="question">
+          <!-- <img src="{{img}}" alt=""> -->
+          <h3 class="text-info bg-info">{{question}}</h3>
+          <div class="answers-box">
+            {{#each answears}}
+            <label class="test-label"><input type="radio" name="answers{{@../key}}" class="answers"> {{this}}</label> {{/each}}
+          </div>
+        </div>
+        {{/each}}
+      </script>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js" integrity="sha256-5Ud5lebnfqDOArqCr7p6w5KxX1dwXFcqiBw25dhhYFI=" crossorigin="anonymous"></script>
+  <script src="js/test.js" charset="utf-8"></script>
+</body>
+
+</html>
