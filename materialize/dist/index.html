@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper cyan white-text center-align">
+              <!-- <div class="row top"> -->
+                <ul id="slide-out" class="side-nav grey-text">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="">
+                            </div>
+                            <a href="#!user"><img class="circle responsive-image user-img" src="https://lorempixel.com/100/100/business"></a>
+                            <a href="#!name"><span class="grey-text name" id="user-name"></span></a>
+                            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                        </div>
+                    </li>
+                    <li><a href="#!"><i class="material-icons">home</i>Our stores</a></li>
+                    <li><a href="#!"><i class="material-icons">mail_outline</i>Subscribe for news</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a class="subheader">Subheader</a></li>
+                    <li><a class="waves-effect" href="#!">Our customers<i class="material-icons">people</i></a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                <div class="col m4">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="photo.html">Recepies</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
+
+                </div>
+                <div class="col m8 s9 right-align grey-text">
+                    <a id="login-btn" class="waves-effect waves-light btn cyan modal-trigger" href="#modal2">Log in</a>
+                    <a id="reg-btn" class="waves-effect waves-light btn cyan modal-trigger" href="#modal4">Registration</a>
+                    <div id="modal2" class="modal center-align">
+                        <div class="modal-content">
+                            <form id="form">
+                                <div class="input-field ">
+                                    <i class="material-icons prefix" id="name-i">account_circle</i>
+                                    <input id="name" type="text" class="validate">
+                                    <label for="name" data-error="wrong" data-success="right" class="white-text">Enter username</label>
+                                </div>
+                                <div class="input-field ">
+                                    <i class="material-icons prefix" id="pass-i">grain</i>
+                                    <input id="pass" type="password" class="validate" min="8">
+                                    <label for="pass" data-error="wrong" data-success="right" class="white-text">Enter password</label>
+                                </div>
+                                <div class="input-field ">
+                                    <!-- <i class="material-icons prefix" id="pass-i">grain</i> -->
+                                    <input type="submit" class="validate">
+                                    <!-- <label for="age" data-error="wrong" data-success="right" class="white-text">Enter password</label> -->
+                                    <a href="#!" id="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Log in</a>
+                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="modal4" class="modal center-align">
+                        <div class="modal-content">
+                            <form id="reg-form">
+                                <div class="input-field ">
+                                    <i class="material-icons prefix" id="name-i">account_circle</i>
+                                    <input id="reg-name" type="text" class="validate">
+                                    <label for="name" data-error="wrong" data-success="right" class="white-text">Enter username</label>
+                                </div>
+                                <div class="input-field ">
+                                    <i class="material-icons prefix" id="pass-i">grain</i>
+                                    <input id="reg-pass" type="password" class="validate" min="8">
+                                    <label for="pass" data-error="wrong" data-success="right" class="white-text">Enter password</label>
+                                </div>
+                                <div class="input-field ">
+                                    <!-- <i class="material-icons prefix" id="pass-i">grain</i> -->
+                                    <input type="submit" class="validate">
+                                    <!-- <label for="age" data-error="wrong" data-success="right" class="white-text">Enter password</label> -->
+                                    <a href="#!" id="create" class="modal-action modal-close waves-effect waves-green btn-flat">Create new account</a>
+                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            
+                
+            <!-- </div> -->
+        </div>
+    </nav>
+    <main>
+        <div class="parallax-container">
+            <div class="parallax"><img src="https://lorempixel.com/1420/1020/food/1" alt=""></div>
+        </div>
+        <div class="custom-card card-panel cyan center-align hoverable">
+            <h2 class="header white-text">Flank Steak Stir Fry with Asparagus and Red Pepper</h2>
+            <a class="waves-effect waves-light btn cyan modal-trigger" href="#modal1">Modal</a>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate doloribus dolorum, ipsam quo reiciendis
+                        voluptatibus itaque quia, tempore velit perferendis cupiditate nesciunt iure consequatur quasi blanditiis
+                        accusamus assumenda temporibus. Repellendus laboriosam alias modi sequi reiciendis ex facilis atque
+                        veritatis minima quisquam ullam, maxime iste officiis magnam voluptatibus consectetur deleniti amet.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dissagree</a>
+                </div>
+            </div>
+            <p class="white-text">Parallax is an effect where the background content or image in this case, is moved at a different speed than
+                the foreground content while scrolling.
+            </p>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax"><img src="https://lorempixel.com/1420/1020/food/2" alt=""></div>
+        </div>
+        <div class="custom-card card-panel cyan white-text center-align hoverable">
+            <h2 class="header">Heading 2</h2>
+            <p class="white-text">Parallax is an effect where the background content or image in this case, is moved at a different speed than
+                the foreground content while scrolling.</p>
+            <div class="row center-align features">
+                <div class="col s12 m4">
+                    <div class="card featured-recepie hoverable cyan white-text">
+                        <div class="card-content white-text">
+                            <span class="card-title">Pizza</span>
+                            <img class="responsive-img" src="https://lorempixel.com/1378/650/food/3">
+                            <p>Classic homemade pizza recipe, including pizza dough and toppings, step-by-step instructions
+                                with photos. Make perfect pizza at home!</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card featured-recepie hoverable cyan white-text">
+                        <div class="card-content white-text">
+                            <span class="card-title">Shrimp Ceviche</span>
+                            <img class="responsive-img" src="https://lorempixel.com/1378/650/food/4">
+                            <p>Cool and tasty shrimp ceviche recipe, shrimp served with chopped red onion, chile, cilantro,
+                                cucumber, avocado with lemon and lime juices.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card featured-recepie hoverable cyan white-text">
+                        <div class="card-content white-text">
+                            <span class="card-title">Fattoush Bread Salad</span>
+                            <img class="responsive-img" src="https://lorempixel.com/1378/650/food/5">
+                            <p>Easy Middle Eastern fattoush! Crispy pita chips, fresh vegetables, and a tangy dressing. 30 minutes.
+                                These satisfying salads are made by tossing together bread.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+      <!-- <div class="row">
+        <div class="col m12">
+            <form id="form">
+                <input type="text" name="" id="name">
+                <input type="text" name="" id="age">
+                <input type="submit" name="" value="Add user">
+
+            </form>
+        </div>
+    </div>   -->
+
+
+
+
+
+    <footer class="page-footer cyan white-text">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col m3 s12 center-align footer-item">
+                        © 2014 Copyright Text
+                    </div>
+                    <div class="col m6 s12 center-align center-align footer-item">
+                        <a href="#!" class="btn btn-floating pulse cyan tooltipped" data-position="top" data-delay="50" data-tooltip="Ukraine, Kiev"><i class="material-icons">location_on</i></a>
+                        <a href="#!" class="btn btn-floating pulse cyan tooltipped" data-position="top" data-delay="50" data-tooltip="10am - 6pm"><i class="material-icons">schedule</i></a>
+                        <a href="#!" class="btn btn-floating pulse cyan tooltipped" data-position="top" data-delay="50" data-tooltip="+3800200500"><i class="material-icons">phone</i></a>
+
+                    </div>
+                    <div class="col m3 s12 center-align footer-item">
+                        <a class="grey-text text-lighten-4 " href="#!">More Links</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-action-btn vertical click-to-toggle">
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a href="#!" class="btn-floating red"><i class="material-icons">add</i></a></li>
+                <li><a href="#!" class="btn-floating yellow"><i class="material-icons">search</i></a></li>
+                <li><a href="#!" class="btn-floating green"><i class="material-icons">bookmark_border</i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
